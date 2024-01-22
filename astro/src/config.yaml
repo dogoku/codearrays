@@ -1,31 +1,31 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Codearrays
+  site: 'https://www.codearrays.dev'
   base: '/'
   trailingSlash: false
 
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+  # googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: CODEARRAYS LTD
+    template: '%s — CODEARRAYS LTD'
+  description: "Empowering Learning & Professional Growth: Advanced E-Learning, Engaging Games, and Immersive Technology"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: CODEARRAYS LTD
     images:
-      - url: '~/assets/images/default.png'
-        width: 1200
-        height: 628
+      - url: '~/assets/images/logos/default.png'
+        width: 1000
+        height: 1000
     type: website
-  twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
-    cardType: summary_large_image
+  # twitter:
+  #   handle: '@onwidget'
+  #   site: '@onwidget'
+  #   cardType: summary_large_image
 
 i18n:
   language: en
@@ -33,7 +33,7 @@ i18n:
 
 apps:
   blog:
-    isEnabled: true
+    isEnabled: false
     postsPerPage: 6
 
     post:
@@ -60,13 +60,13 @@ apps:
       robots:
         index: false
 
-analytics:
-  vendors:
-    googleAnalytics:
-      id: null # or "G-XXXXXXXXXX"
+# analytics:
+#   vendors:
+#     googleAnalytics:
+#       id: null # or "G-XXXXXXXXXX"
 
 ui:
-  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  theme: 'light:only' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
   tokens:
     default:
@@ -79,8 +79,8 @@ ui:
         heading: rgb(0 0 0)
         muted: rgb(40 40 40)
         bgPage: rgb(255 255 255)
-        primary: rgb(0 124 220)
-        secondary: rgb(30 58 138)
+        primary: rgb(146, 13, 233)
+        secondary: rgb(21, 54, 241)
         accent: rgb(109 40 217)
         info: rgb(119 182 234)
         success: rgb(54 211 153)
