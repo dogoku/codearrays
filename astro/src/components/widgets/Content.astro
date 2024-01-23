@@ -68,10 +68,10 @@ const {
           }}
         />
       </div>
-      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
+      <div aria-hidden="true" class="flex items-center mt-10 md:mt-0 md:basis-1/2">
         {
           image && (
-            <div class="relative m-auto max-w-4xl">
+            <div class="flex-1 relative m-auto max-w-4xl">
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
               ) : (

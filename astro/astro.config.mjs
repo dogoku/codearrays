@@ -40,6 +40,10 @@ export default defineConfig({
       include: {
         tabler: ['*'],
         'flat-color-icons': [
+          'binoculars',
+          'idea',
+          'reading',
+          'workflow',
           'template',
           'gallery',
           'approval',

@@ -1,7 +1,7 @@
 ---
 import Layout from '~/layouts/Layout.astro';
 import Header from '~/components/widgets/Header.astro';
-import Footer from '~/components/widgets/Footer.astro';
+import Logo from "~/components/Logo.astro";
 import Announcement from '~/components/widgets/Announcement.astro';
 
 import { headerData, footerData } from '~/navigation';
@@ -28,5 +28,13 @@ const { metadata } = Astro.props;
   </main>
   <slot name="footer">
     <!-- <Footer {...footerData} /> -->
+    <footer class="relative">
+      <div class="dark:bg-dark absolute inset-0 pointer-events-none" style="background: linear-gradient(120deg, rgba(146, 13, 233, 0.85), rgba(21, 54, 241, 0.85)) no-repeat;" aria-hidden="true"></div>
+      <div class="relative flex flex-col md:flex-row gap-2 items-center justify-center opacity-90 max-w-7xl mx-auto px-4 py-12 sm:px-6 text-white dark:text-slate-300">
+        <Logo />
+        <span class="text-xl">·</span>
+        <span class="text-lg">All rights reserved.</span>
+      </div>
+    </footer>
   </slot>
 </Layout>
