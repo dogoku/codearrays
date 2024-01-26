@@ -1,228 +1,135 @@
 ---
-import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
+import Content from '~/components/widgets/Content.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import FancyWhiteBg from '~/components/ui/FancyWhiteBg.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'About Us',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <div class="relative">
+    <div class="absolute h-svh inset-0 pointer-events-none" aria-hidden="true">
+      <FancyWhiteBg />
+    </div>
+  </div>
 
-  <Hero
-    tagline="About us"
-    image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
-    }}
+  <HeroText
+    tagline="About Us"
+    title="Who We Are"
   >
-    <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white highlight"> Beautiful Website Templates</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
-    </Fragment>
-  </Hero>
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    title="Statistics about us"
-    stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
-    ]}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
-    columns={3}
-    isBeforeContent={true}
+    <FancyWhiteBg slot='bg' />
+  </HeroText>
+  <Content
+    isReversed
     items={[
       {
-        title: 'Educational',
+        title: 'Innovators in Educational Technology',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
+          'At CodeArrays, we are at the forefront of integrating technology in education, continuously innovating to enhance learning through digital means.',
       },
       {
-        title: 'Interior Design',
+        title: 'Pioneering Software Development',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
+          'As pioneers in software development, we focus on designing state-of-the-art digital solutions tailored for the educational sector. Our products aim to transform educational delivery and experiences.',
       },
       {
-        title: 'Photography',
+        title: 'Expertise in Digital Transformation',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
-      },
-    ]}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
+          'We specialise in revolutionising the educational landscape by using technology to evolve traditional learning methods and promoting new learning paradigms',
       },
       {
-        title: 'Blog',
+        title: 'Learning for everyone',
         description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
+          'Our dedication extends to making learning universally accessible. By utilising technology, we do our utmost to eliminate educational barriers and open up opportunities for learners from all backgrounds.',
       },
       {
-        title: 'Business',
+        title: 'Dedicated to Engagement and Effectiveness',
         description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
+          'Our solutions are designed to incorporate technology and enhance engagement and learning effectiveness. We aim to create captivating educational experiences that foster deep understanding.',
       },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
-      },
+      // {
+      //   title: 'Innovative Approach',
+      //   description: 'Innovation is at the heart of our operations. From product design to teaching methodologies, we are committed to incorporating innovative strategies in all facets of our work.',
+      // },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      src: '~/assets/images/who-we-are.jpg',
       alt: 'Colorful Image',
     }}
-  />
+  >
+  </Content>
 
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+  <Content
+    title="Our Vision"
     items={[
       {
-        title: 'Customer-centric approach',
+        title: "Integration of Education and Technology",
         description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+          "We envision a future where every aspect of education is seamlessly enhanced by digital innovation. In this future, learning exceeds traditional boundaries, becoming more engaging, flexible, and tailored to individual needs."
       },
       {
-        title: 'Constant Improvement',
+        title: "Limitless Learning Environment",
         description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+          "We are dedicated to transforming learning into an exciting, boundless journey. By leveraging digital technologies, we aim to dismantle physical and digital educational barriers, fostering an environment that encourages exploration and growth at a personal pace."
       },
       {
-        title: 'Ethical Practices',
+        title: "Empowering Educators and Learners",
         description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      },
+          "Empowerment through education is a fundamental aspect of our vision. We are focused on developing tools that not only educate but also inspire and empower. Our goal is to lead the educational transformation, creating solutions that foster knowledge, confidence, creativity, and a lifelong passion for learning."
+      }
     ]}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
+    image={{
+      src: '~/assets/images/our-vision.jpg',
+      alt: 'Blueprint Image',
     }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title="Our Mision"
     items={[
       {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
+        title: "Advancing Education with Innovative Technology",
+        description:
+          "Our mission is to design and implement cutting-edge educational technologies. These are not merely advanced in technical aspects but are also constructed to enhance and transform the learning experience significantly."
       },
       {
-        title: 'Positive customer feedback and reviews',
+        title: "Wide Range of Effective Learning Tools",
         description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
+          "We commit to creating a broad spectrum of digital learning tools such as interactive e-learning platforms, educational video games, mobile apps, and comprehensive web applications. Our focus is on creating technologically advanced tools that are grounded in educational efficacy, ensuring a meaningful impact on learners of all ages."
       },
       {
-        title: 'Awards and recognition as industry experts',
+        title: "Preparing Learners for Tomorrow's World",
         description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
+          "We are dedicated to equipping learners and professionals to thrive amidst rapid technological and societal changes. Our tools aim to foster critical thinking, creativity, and lifelong learning, preparing individuals for future challenges and opportunities."
       },
     ]}
-  />
+    image={{
+      src: '~/assets/images/mission.jpg',
+      alt: 'Colorful Image',
+    }}
+  ></Content>
 
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
-    items={[
+  <CallToAction
+    classes={{ container: '!py-32 !pb-48' }}
+    actions={[
       {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+        variant: 'primary',
+        text: 'Get in touch',
+        href: '/contact',
+        icon: 'tabler:mail',
       },
     ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
-    columns={2}
-    items={[
-      {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
-      },
-      {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
-      },
-    ]}
-  />
+  >
+    <Fragment slot="title">Ready to learn more?</Fragment>
+    <Fragment slot="subtitle">The Join our Journey to Educational Innovation</Fragment>
+  </CallToAction>
 </Layout>

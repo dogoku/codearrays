@@ -198,7 +198,7 @@ export interface Collapse {
   classes?: Record<string, string>;
 }
 
-export interface Form {
+export interface Form extends astroHTML.JSX.FormHTMLAttributes {
   inputs?: Array<Input>;
   textarea?: Textarea;
   disclaimer?: Disclaimer;

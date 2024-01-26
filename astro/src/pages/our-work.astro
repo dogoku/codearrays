@@ -1,0 +1,205 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import FancyWhiteBg from '~/components/ui/FancyWhiteBg.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Our Work',
+};
+---
+
+<Layout metadata={metadata}>
+  <div class="relative min-h-svh">
+    <div class="absolute h-svh inset-0 pointer-events-none" aria-hidden="true">
+      <FancyWhiteBg />
+    </div>
+
+    <div class="mb-12">
+      <HeroText tagline="Our Work" title="What We Do" />
+    </div>
+
+    <Content
+      isAfterContent
+      isReversed
+      image={{
+        style: 'object-fit: contain; background: white; padding: 0 16px',
+        src: '~/assets/images/project-elearning.png',
+        alt: 'E-Learning Image',
+      }}
+      items={[
+        {
+          title: 'Custom Learning',
+          description:
+            "We make e-learning platforms that suit everyone's needs, helping students and professionals learn in their own style. We make sure everyone gets a learning path that fits them.",
+        },
+        {
+          title: 'Easy and Intuitive Design',
+          description:
+            'Our platforms are easy to use and intuitive. We add interactive elements and videos to make learning effective and impactful.',
+        },
+        {
+          title: 'Learn Anywhere',
+          description:
+            'Our platforms work on phones, tablets, and computers, so you can learn wherever you are, whenever you want.',
+        },
+      ]}
+    >
+      <Fragment slot="content">
+        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+          E-Learning Platforms
+        </h3>
+      </Fragment>
+    </Content>
+
+    <Content
+      isAfterContent
+      image={{
+        style: 'object-fit: contain; background: white; padding: 0 16px; filter: blur(1px)',
+        src: '~/assets/images/project-vr.png',
+        alt: 'E-Learning Image',
+      }}
+      items={[
+        {
+          title: 'Learn with Games',
+          description:
+            "We create 2D and 3D video games that make learning and professional training fun. Our games mix important concepts with exciting gameplay.",
+        },
+        {
+          title: 'Virtual Reality for Training',
+          description:
+            'We use VR and AR to create realistic training environments. This helps people learn skills in a safe, virtual space.',
+        },
+        {
+          title: 'Games for Better Learning',
+          description:
+            'Our games teach complex ideas in a way that is enjoyed and valuable for people of all ages, improving skills for school or work.',
+        },
+      ]}
+    >
+      <Fragment slot="content">
+        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+          Serious & Educational Video Games
+        </h3>
+      </Fragment>
+    </Content>
+
+    <Content
+      isAfterContent
+      isReversed
+      image={{
+        style: 'object-fit: cover; background: white;',
+        src: '~/assets/images/project-mobile.jpg',
+        alt: 'E-Learning Image',
+      }}
+      items={[
+        {
+          title: 'Personalised Learning Apps',
+          description:
+            "Our Android and iOS apps offer learning experiences just for you. They change to fit your education and career training needs.",
+        },
+        {
+          title: 'Learning Anytime, Anywhere',
+          description:
+            'Our apps let you learn on the move with quizzes and games. They make learning flexible to fit into your life.',
+        },
+        {
+          title: 'All Your Learning Materials in One Place',
+          description:
+            'Our apps give you access to lots of educational resources like videos and e-books, helping you keep learning and growing.',
+        },
+      ]}
+    >
+      <Fragment slot="content">
+        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+          Mobile Apps
+        </h3>
+      </Fragment>
+    </Content>
+
+    <Content
+      isAfterContent
+      image={{
+        style: 'object-fit: contain; background: white; padding: 0 16px',
+        src: '~/assets/images/project-ai.jpg',
+        alt: 'E-Learning Image',
+      }}
+      items={[
+        {
+          title: 'AI Help',
+          description:
+            "Our AI chatbots provide personalised help, making learning more interactive and tailored to you.",
+        },
+        {
+          title: 'Custom AI Learning',
+          description:
+            'We create AI solutions that adapt to your needs, ensuring your learning is always right for you.',
+        },
+        {
+          title: 'Always Improving Content',
+          description:
+            'We use machine learning to constantly improve our educational content, keeping it fresh and effective.',
+        },
+        {
+          title: 'Better Visual Learning',
+          description:
+            'We use image recognition to make learning with pictures and videos more interactive and helpful.',
+        },
+      ]}
+    >
+      <Fragment slot="content">
+        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+          Artificial Intelligence in Education and Professional Training
+        </h3>
+      </Fragment>
+    </Content>
+
+    <Content
+      isAfterContent
+      isReversed
+      image={{
+        style: 'object-fit: contain; background: white; padding: 0 16px',
+        src: '~/assets/images/project-stem.png',
+        alt: 'E-Learning Image',
+      }}
+      items={[
+        {
+          title: 'Show Off Your Skills with Digital Badges',
+          description:
+            "Our digital badges certify your learning and skills. You can display them on platforms like LinkedIn to show your abilities to employers.",
+        },
+        {
+          title: 'Specialised Skills Recognition',
+          description:
+            'We offer microcredentials to recognise your specific skills, helping you stand out as a continuous learner.',
+        },
+        {
+          title: 'Easy Credential Sharing',
+          description:
+            'You can easily add our badges and microcredentials to your professional profiles, showing off your learning and skills to advance your career.',
+        },
+      ]}
+    >
+      <Fragment slot="content">
+        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+          Validation and Accreditation
+        </h3>
+      </Fragment>
+    </Content>
+
+    <CallToAction
+      classes={{ container: '!py-32 !pb-48' }}
+      title="Have an idea for a project?"
+      subtitle="Join our community of collaborators, pushing Education forward."
+      actions={[
+        {
+          variant: 'primary',
+          text: 'Get in touch',
+          href: '/contact',
+          icon: 'tabler:mail',
+        },
+      ]}
+    />
+  </div>
+</Layout>

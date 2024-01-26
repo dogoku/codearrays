@@ -13,28 +13,68 @@ const {
   disclaimer,
   button,
   description,
-
+  action,
+  method,
   id,
+  onsubmit,
   isDark = false,
   classes = {},
   bg = await Astro.slots.render('bg'),
 } = Astro.props as Contact;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
-  <Headline title={title} subtitle={subtitle} tagline={tagline} />
+<div class="px-4 mt-8" id={id}>
 
   {
     inputs && (
-      <div class="flex flex-col max-w-xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8 w-full">
+      <div class="relative flex flex-col max-w-xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8 w-full">
         <FormContainer
+          onsubmit={onsubmit}
+          action={action}
+          method={method}
           inputs={inputs}
           textarea={textarea}
           disclaimer={disclaimer}
           button={button}
           description={description}
         />
+        <div id="successMsg" class="absolute inset-1 flex items-center justify-center bg-white opacity-90" style="display: none;">
+          <Headline tagline="Thank you for your interest!" subtitle="We will get back to you as soon as possible."></Headline>
+        </div>
       </div>
     )
   }
-</WidgetWrapper>
+</div>
+
+<script is:inline src="https://www.google.com/recaptcha/api.js?render=6LdmmFopAAAAANjWBUwnwyl88kYoHCXV7CbTDoPp"></script>
+  <script is:inline>
+    const formURL = new URL('https://script.google.com/a/macros/dogoku.net/s/AKfycbyeMzRHMU8zu5OsGHsMy7WNYk65JhDpYUF0LkoAJEjVdCIf-g4dFAxX1cgb4gN4wpdMcg/exec');
+
+    window.contactSubmit = function contactSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      form.firstElementChild.disabled = true;
+      grecaptcha.ready(async () => {
+        const token = await grecaptcha.execute('6LdmmFopAAAAANjWBUwnwyl88kYoHCXV7CbTDoPp', {action: 'submit'});
+        await submitForm(formData, token);
+        form.firstElementChild.disabled = false;
+        document.getElementById('successMsg').style.display = '';
+      });
+    }
+
+    async function submitForm(formData, token) {
+      formData.append('response', token);
+      formURL.search = new URLSearchParams(formData).toString();
+      console.log(formURL.toString());
+      const response = await fetch(formURL, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          "Content-Type": "text/plain;charset=utf-8",
+        }
+      });
+      const result = await response.json();
+      console.log(result);
+    }
+  </script>

@@ -68,9 +68,8 @@ const {
                 titleClass,
                 itemClasses?.title
               )}
-            >
-              {title}
-            </div>
+              set:html={title}
+            ></div>
             {description && (
               <p
                 class={twMerge(

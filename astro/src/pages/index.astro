@@ -5,6 +5,7 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
+import FancyWhiteBg from '~/components/ui/FancyWhiteBg.astro';
 
 const metadata = {
   title: 'CODEARRAYS LTD',
@@ -15,35 +16,27 @@ const metadata = {
 <Layout metadata={metadata}>
   <Hero2
     actions={[
-      { variant: 'primary', target: '_blank', text: 'Get Started', href: 'https://github.com/onwidget/astrowind' },
-      { text: 'Learn more', href: '#features' },
+      { variant: 'primary', text: 'Find out more!', href: '#codearrays' },
     ]}
     image={{
-      src: '~/assets/images/hero.svg',
+      width: "auto",
+      height: "auto",
+      src: '~/assets/images/hero3.svg',
       alt: 'CODEARRAYS virtual reality',
     }}
   >
+    <FancyWhiteBg slot='bg' />
     <Fragment slot="title">
-      Empowering Learning & Professional Growth
+      Empowering <span class="text-accent">Learning</span> & <span class="text-secondary">Professional Growth</span>
     </Fragment>
-
-    <Fragment slot="subtitle">
-      Through Advanced E-Learning, Engaging Games and Immersive Technologies
-    </Fragment>
-    <!-- <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment> -->
+    <Fragment slot="subtitle">Through Advanced E-Learning, Engaging Games and Immersive Technologies</Fragment>
   </Hero2>
 
   <Features2
+    id="codearrays"
     tagline="Redefine Learning with"
     columns={2}
     title="CODEARRAYS"
-    {
-      /*title="Dedicated to revolutionising the Education and Professional Training sectors through state-of-the-art digital solutions."*/
-      null
-    }
-
     subtitle="We focus on developing software that bridges the gap between technology and education, offering dynamic, interactive, and intuitive learning experiences."
     items={[
       {
@@ -109,19 +102,18 @@ const metadata = {
       },
       {
         title: 'Collaborative Learning Spaces',
-        description:
-          'Our platforms encourage collaborative teamwork and communication within virtual environments.',
+        description: 'Our platforms encourage collaborative teamwork and communication within virtual environments.',
       },
     ]}
     image={{
-      style: "background: transparent; box-shadow: none;",
+      style: 'background: transparent; box-shadow: none;',
       src: '~/assets/images/vr-group-illustration.svg',
       alt: 'Colorful Image',
     }}
-  ></Content>
+  />
 
   <Content
-    title="E-Learning"
+    title="E-Learning and Training"
     subtitle="Transforming Education with Technology"
     items={[
       {
@@ -136,11 +128,11 @@ const metadata = {
       {
         title: 'Skills Validation and Accreditation',
         description:
-          "We utilise the open badge ecosystem and micro-credentials to provide recognised and valued evidence of learning achievements, supporting the skills and competencies acquired through our platforms.",
+          'We utilise the open badge ecosystem and micro-credentials to provide recognised and valued evidence of learning achievements, supporting the skills and competencies acquired through our platforms.',
       },
     ]}
     image={{
-      style: "background: transparent; box-shadow: none;",
+      style: 'background: transparent; box-shadow: none;',
       src: '~/assets/images/e-learning.svg',
       alt: 'Blueprint Image',
     }}
@@ -153,7 +145,7 @@ const metadata = {
   <Content
     isReversed
     title="Artificial Intelligence"
-    subtitle="Crafting a Smarter Learning Experience"
+    subtitle="Harnessing AI for Smarter Learning"
     items={[
       {
         title: 'Custom-Made Chatbots',
@@ -178,13 +170,14 @@ const metadata = {
     image={{
       height: 533,
       width: 768,
-      style: "background: transparent; box-shadow: none;",
+      style: 'background: transparent; box-shadow: none;',
       src: '~/assets/images/chatbot.webp',
       alt: 'Astronauts Image',
     }}
-  ></Content>
+  />
 
   <CallToAction
+    classes={{ container: '!py-32 !pb-48' }}
     actions={[
       {
         variant: 'primary',
@@ -194,12 +187,8 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="title">
-      Join the Future of Learning
-    </Fragment>
+    <Fragment slot="title">Join the Future of Learning</Fragment>
 
-    <Fragment slot="subtitle">
-      Together we can transform the way we learn and teach.
-    </Fragment>
+    <Fragment slot="subtitle">Together we can transform the way we learn and teach.</Fragment>
   </CallToAction>
 </Layout>

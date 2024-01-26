@@ -2,10 +2,11 @@
 import type { Form } from '~/types';
 import Button from '~/components/ui/Button.astro';
 
-const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props as Form;
+const { onsubmit, action, method, inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props as Form;
 ---
 
-<form>
+<form action={action} method={method} onsubmit={onsubmit}>
+  <fieldset>
   {
     inputs &&
       inputs.map(
@@ -14,7 +15,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
             <div class="mb-6">
               {label && (
                 <label for={name} class="block text-sm font-medium">
-                  {label}
+                  {label} *
                 </label>
               )}
               <input
@@ -23,7 +24,8 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
                 id={name}
                 autocomplete={autocomplete}
                 placeholder={placeholder}
-                class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+                required
+                class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 hover:border-gray-400 dark:border-gray-700 bg-white dark:bg-slate-900"
               />
             </div>
           )
@@ -34,14 +36,15 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
     textarea && (
       <div>
         <label for="textarea" class="block text-sm font-medium">
-          {textarea.label}
+          {textarea.label} *
         </label>
         <textarea
           id="textarea"
-          name="textarea"
+          name={textarea.label}
           rows={textarea.rows ? textarea.rows : 4}
           placeholder={textarea.placeholder}
-          class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+          required maxlength="500"
+          class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 hover:border-gray-400 dark:border-gray-700 bg-white dark:bg-slate-900"
         />
       </div>
     )
@@ -55,6 +58,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
             id="disclaimer"
             name="disclaimer"
             type="checkbox"
+            required
             class="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
           />
         </div>
@@ -82,4 +86,5 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
       </div>
     )
   }
+  </fieldset>
 </form>

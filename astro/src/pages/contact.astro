@@ -3,29 +3,37 @@ import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import FancyWhiteBg from '~/components/ui/FancyWhiteBg.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'Contact Us',
 };
+
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
+  <div class="relative">
+    <div class="absolute h-svh inset-0 pointer-events-none" aria-hidden="true">
+      <FancyWhiteBg />
+    </div>
+  </div>
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText tagline="Contact Us" title="Let's Connect!"></HeroText>
 
   <ContactUs
+    action="#";
+    onsubmit="contactSubmit(event)"
     title="Drop us a message today!"
     subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
     inputs={[
       {
         type: 'text',
-        name: 'name',
+        name: 'Name',
         label: 'Name',
       },
       {
         type: 'email',
-        name: 'email',
+        name: 'Email',
         label: 'Email',
       },
     ]}
@@ -34,45 +42,50 @@ const metadata = {
     }}
     disclaimer={{
       label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+        'I consent to the usage of my info to contact me regarding my enquiry *',
     }}
-    description="Our support team typically responds within 24 business hours."
+    description="We try our best, to get back to you as soon as possible."
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="We are here to help!"
+    columns={2}
+    title="Other ways to reach us:"
+    subtitle="We are here to help!"
     items={[
+
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
+        classes: {
+          icon: 'm-0',
+          panel: 'md:flex-row flex-wrap gap-2 items-center',
+          description: 'm-0'
+        },
         title: 'Phone',
         description: '+1 (234) 567-890',
         icon: 'tabler:headset',
       },
       {
+        classes: {
+          icon: 'm-0',
+          panel: 'md:flex-row flex-wrap gap-2 items-center',
+          description: 'm-0'
+        },
         title: 'Email',
-        description: 'contact@support.com',
+        description: 'projects@codearrays.dev',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
+        classes: {
+          icon: 'm-0',
+          panel: 'col-span-2 flex-col md:flex-row flex-wrap gap-2 items-center',
+          description: 'flex-1 w-full md:flex-[1_0_100%]'
+        },
+        title: 'Location: <span class="text-muted text-base font-normal">5A Agapinoros Street, Nicosia 2412, Cyprus</span>',
+        description: '<iframe width="100%" height="400" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:EilBZ2FwaW5vcm9zLCBFZ2tvbWkgTGVma29zaWFzIDI0MTIsIEN5cHJ1cyIuKiwKFAoSCWcNej9EGt4UEaJIPtDEEh5MEhQKEgm1x2clvxDeFBHzRxzCmOQg-Q&key=AIzaSyAde1xaHWBK99BMg1lY6_U7VYnJslrq_l0"></iframe>',
         icon: 'tabler:map-pin',
       },
     ]}
   />
+
 </Layout>
