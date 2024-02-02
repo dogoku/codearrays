@@ -50,21 +50,13 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    columns={2}
+    columns={1}
     title="Other ways to reach us:"
     subtitle="We are here to help!"
+     classes={{
+      container: "w-fit"
+     }}
     items={[
-
-      {
-        classes: {
-          icon: 'm-0',
-          panel: 'md:flex-row flex-wrap gap-2 items-center',
-          description: 'm-0'
-        },
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
       {
         classes: {
           icon: 'm-0',
@@ -74,17 +66,7 @@ const metadata = {
         title: 'Email',
         description: 'projects@codearrays.dev',
         icon: 'tabler:mail',
-      },
-      {
-        classes: {
-          icon: 'm-0',
-          panel: 'col-span-2 flex-col md:flex-row flex-wrap gap-2 items-center',
-          description: 'flex-1 w-full md:flex-[1_0_100%]'
-        },
-        title: 'Location: <span class="text-muted text-base font-normal">5A Agapinoros Street, Nicosia 2412, Cyprus</span>',
-        description: '<iframe width="100%" height="400" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:EilBZ2FwaW5vcm9zLCBFZ2tvbWkgTGVma29zaWFzIDI0MTIsIEN5cHJ1cyIuKiwKFAoSCWcNej9EGt4UEaJIPtDEEh5MEhQKEgm1x2clvxDeFBHzRxzCmOQg-Q&key=AIzaSyAde1xaHWBK99BMg1lY6_U7VYnJslrq_l0"></iframe>',
-        icon: 'tabler:map-pin',
-      },
+      }
     ]}
   />
 
