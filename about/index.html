@@ -1,0 +1,178 @@
+<!DOCTYPE html><html lang="en" dir="ltr" class="2xl:text-[20px]"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="sitemap" href="/sitemap-index.xml"><link rel="preconnect" href="https://www.google.com"><link rel="preconnect" href="https://www.gstatic.com" crossorigin><link rel="preconnect" href="https://script.google.com" crossorigin><link rel="preconnect" href="https://script.googleusercontent.com/" crossorigin><link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAADtIFn/7SBX/+0jV//tJVb/7SNT/+0hT//tH0z/7SBL/+0gSP/tHET/7RxC/+4gQv/uJUX/7ilH/+4mQf/vLkf/7R9Z/+0iWf/sGFD/7BNK/+0eUP/tJ1X/7i9a/+4uV//uNFr/8ERl//FHZv/wPFv/7ilK/+0dPf/uJkP/7y5I/+0hXP/sF1L/8Ux4//mxw//70t3//ODn//3s8P/+7fH//vL1///8/f///P3//vT2//7s7//1fZD/7Ro6/+8wS//sF1X/8EV2//74+v////////7+//////////////////////////////////////////////////FQaf/uJEH/6w5Q//edt/////////39//m3yP/0cpL/+Ke7///+/v//////+Ki5//Nphf/6v8v////////////1fI//7Rw9/+sPUv/4p7////////zZ4v/uLGD/9Yml//ebsv///f3///////rBzf/3pLX/8ENl//vQ2f//////9pGh/+0cPf/rDlP/+Ka////////5ucv/8lqE/////////f3//////////////Pz///////Nsh//2jqL///////iotv/tHkD/6xFV//m0yv//////+sTU//JYg/////////r7//////////////n6///////1gpr/9Yqg///////4pbT/7R1A/+sQVv/5ssj///////q9z//yW4b////////7/P/////////////6+///////95qu//WFnP//////+KOy/+0cQf/rDVX/96K9///////5t8r/8VeE/////////P3//////////////Pz///////ecsP/0d5L///////iruv/tHUP/6wxV//WMrv///////u/0//BKe//xTHv/+Kq/////////////+r/N//Jbf//vOGH/+brI///////4qbn/7R1E/+sQWv/xVon////////////95+3/+K3D//zb5P////////////3i6f/6wM7//eLo///6+///////9o2i/+0aQ//sHmX/6xNb//inwf////////39///////////////////////////////////+/v///////vj5//BEZ//tI0v/7B1l/+waYf/sH2L/+KrD//3n7v/96e///e3y///6+//96e//+9Te//rBz//3obb/9YCb//BDav/sG0j/7ixU/+wcZf/sHWT/7Bth/+sRWP/sI2P/7Spm/+0sZf/vOW3/7ilf/+0cVP/sF07/7BJI/+wSRv/sHEz/7SNP/+4qU//sG2b/7Bxk/+wdY//sIGP/7Bxf/+wbXP/sG1r/7BhW/+0dWP/tIVn/7SNY/+0lWP/tJVb/7SRT/+0hT//uKlT/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="><link rel="icon" type="image/svg+xml" href="/_astro/favicon.ZkBcr9-G.svg"><link rel="mask-icon" href="/_astro/favicon.ZkBcr9-G.svg" color="#8D46E7"><link rel="apple-touch-icon" sizes="180x180" href="/_astro/apple-touch-icon.mhk0T9Xw.png"><style is:global>
+  :root {
+    --aw-font-sans: 'Ubuntu';
+    --aw-font-serif: var(--aw-font-sans);
+    --aw-font-heading: var(--aw-font-sans);
+
+    --aw-color-primary: rgb(146, 13, 233);
+    --aw-color-secondary: rgb(21, 54, 241);
+    --aw-color-accent: rgb(146, 13, 233);
+
+    --aw-color-text-heading: rgb(0 0 0);
+    --aw-color-text-default: rgb(16 16 16);
+    --aw-color-text-muted: rgb(16 16 16 / 66%);
+    --aw-color-bg-page: rgb(255 255 255);
+
+    --aw-color-bg-page-dark: rgb(3 6 32);
+
+  }
+
+  .dark {
+    --aw-font-sans: 'Ubuntu';
+    --aw-font-serif: var(--aw-font-sans);
+    --aw-font-heading: var(--aw-font-sans);
+
+    --aw-color-primary: rgb(30 64 175);
+    --aw-color-secondary: rgb(30 58 138);
+    --aw-color-accent: rgb(109 40 217);
+
+    --aw-color-text-heading: rgb(0 0 0);
+    --aw-color-text-default: rgb(229 236 246);
+    --aw-color-text-muted: rgb(229 236 246 / 66%);
+    --aw-color-bg-page: var(--aw-color-bg-page-dark);
+
+    ::selection {background-color: black; color: snow}
+
+  }
+</style><script>(function(){const defaultTheme = "light:only";
+
+  function applyTheme(theme) {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    const matches = document.querySelectorAll("[data-aw-toggle-color-scheme] > input");
+
+    if (matches && matches.length) {
+      matches.forEach((elem) => {
+        elem.checked = theme !== "dark";
+      });
+    }
+  }
+
+  if ((defaultTheme && defaultTheme.endsWith(":only")) || (!localStorage.theme && defaultTheme !== "system")) {
+    applyTheme(defaultTheme.replace(":only", ""));
+  } else if (
+    localStorage.theme === "dark" ||
+    (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    applyTheme("dark");
+  } else {
+    applyTheme("light");
+  }
+})();</script><title>About Us — CODEARRAYS LTD</title>
+<meta name="description" content="Empowering Learning &amp; Professional Growth: Advanced E-Learning, Engaging Games, and Immersive Technology" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://www.codearrays.dev/about" />
+<meta property="og:title" content="About Us" />
+<meta property="og:description" content="Empowering Learning &amp; Professional Growth: Advanced E-Learning, Engaging Games, and Immersive Technology" />
+<meta property="og:url" content="https://www.codearrays.dev/about" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="" />
+
+<meta property="og:locale" content="en" />
+<meta property="og:site_name" content="CODEARRAYS LTD" />
+<meta name="twitter:card" content="summary" /><!-- Uncomment line below to activate View Transitions --><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="swap"><link rel="stylesheet" href="/_astro/privacy.flOWPms6.css" /><script type="module" src="/_astro/hoisted.l-JsOPk0.js"></script></head> <body class="antialiased text-default bg-page tracking-tight">    <header class="sticky top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out" data-aw-sticky-header id="header"> <div class="absolute inset-0 backdrop-blur-sm" style="background: linear-gradient(120deg, rgba(146, 13, 233, 0.85), rgba(21, 54, 241, 0.85)) no-repeat;"></div> <div class="relative text-white py-3 px-3 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl"> <div class="flex justify-between"> <a class="flex items-center" href="/"> <a href="/" class="flex gap-2 self-center items-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-white whitespace-nowrap"> <img src="/_astro/logo.vTg69aO7.svg" width="64.719" height="59" srcset="/_astro/logo.vTg69aO7_Z1Lk1KJ.svg 64.719w, /_astro/logo.vTg69aO7_CyLmY.svg 129.438w" sizes="(min-width: 64.719px) 64.719px, 100vw" style="object-fit: cover; object-position: center; max-width: 64.719px; max-height: 59px; aspect-ratio: 1.0969322033898303; width: 100%;" alt="CODEARRAYS Logo" class="h-8" loading="lazy" decoding="async"> <span class="uppercase text-2xl" style="font-family: Ubuntu, system-ui, sans-serif; font-weight: bold;">CODEARRAYS LTD</span> </a> </a> <div class="flex items-center md:hidden"> <button class="flex flex-col h-12 w-12 rounded justify-center items-center cursor-pointer group" aria-label="Toggle Menu" data-aw-toggle-menu> <span class="sr-only">Toggle Menu</span>  <span aria-hidden="true" class="h-0.5 w-6 my-1 rounded-full bg-white transition ease transform duration-200 opacity-80 group-[.expanded]:rotate-45 group-[.expanded]:translate-y-2.5"></span> <span aria-hidden="true" class="h-0.5 w-6 my-1 rounded-full bg-white transition ease transform duration-200 opacity-80 group-[.expanded]:opacity-0"></span> <span aria-hidden="true" class="h-0.5 w-6 my-1 rounded-full bg-white transition ease transform duration-200 opacity-80 group-[.expanded]:-rotate-45 group-[.expanded]:-translate-y-2.5"></span>  </button> </div> </div> <nav class="items-center w-full md:w-auto hidden md:flex text-white overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:mx-5" aria-label="Main navigation"> <ul class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-xl md:text-[0.9375rem] tracking-[0.01rem] font-medium"> <li class=""> <a class="hover:underline underline-offset-4 px-4 py-3 flex items-centers" href="/"> Home </a> </li><li class=""> <a class="hover:underline underline-offset-4 px-4 py-3 flex items-centers aw-link-active" href="/about"> About us </a> </li><li class=""> <a class="hover:underline underline-offset-4 px-4 py-3 flex items-centers" href="/our-work"> Our Work </a> </li> </ul> </nav> <div class="hidden md:self-center flex md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 md:p-0"> <div class="items-center flex justify-between w-full md:w-auto"> <div class="flex">   </div> <span class="ml-4 rtl:ml-0 rtl:mr-4"> <a class="btn-secondary ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto hover:text-default" href="/contact">Contact Us</a> </span> </div> </div> </div> </header>  <main>  <div class="relative"> <div class="absolute h-svh inset-0 pointer-events-none" aria-hidden="true"> <div class="absolute inset-0 overflow-hidden"> <svg class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-purple-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]" aria-hidden="true"> <defs> <pattern id="e813992c-7d03-4cc4-a2bd-151760b470a0" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse"> <path d="M100 200V.5M.5 .5H200" fill="none"></path> </pattern> </defs> <svg x="50%" y="-1" class="overflow-visible fill-purple-50"> <path d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z" stroke-width="0"></path> </svg> <rect width="100%" height="100%" stroke-width="0" fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)"></rect> </svg> </div> </div> </div> <section class="relative md:-mt-[76px] not-prose"> <div class="absolute inset-0 pointer-events-none" aria-hidden="true"> <div class="absolute inset-0 overflow-hidden"> <svg class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-purple-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]" aria-hidden="true"> <defs> <pattern id="e813992c-7d03-4cc4-a2bd-151760b470a0" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse"> <path d="M100 200V.5M.5 .5H200" fill="none"></path> </pattern> </defs> <svg x="50%" y="-1" class="overflow-visible fill-purple-50"> <path d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z" stroke-width="0"></path> </svg> <rect width="100%" height="100%" stroke-width="0" fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)"></rect> </svg> </div> </div> <div class="relative max-w-7xl mx-auto px-4 sm:px-6"> <div class="pt-0 md:pt-[76px] pointer-events-none"></div> <div class="py-12 md:py-20 pb-8 md:pb-8"> <div class="text-center max-w-5xl mx-auto"> <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">About Us</p> <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">Who We Are</h1> <div class="max-w-3xl mx-auto">  <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">   </div> </div>  </div> </div> </div> </section> <section class="relative not-prose scroll-mt-[72px]"> <div class="absolute inset-0 pointer-events-none -z-[1]" aria-hidden="true">  <div class="absolute inset-0">  </div>  </div> <div class="relative px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default max-w-7xl mx-auto">   <div class="mx-auto max-w-7xl p-4 md:px-8"> <div class="md:flex md:flex-row-reverse md:gap-16"> <div class="md:basis-1/2 self-center">   <div class="grid mx-auto gap-8 gap-y-4 md:gap-y-8"><div><div class="flex flex-row max-w-none"><div class="flex justify-center"><svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-2 rtl:mr-0 rtl:ml-2 flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1" data-icon="tabler:check">   <use  xlink:href="#ai:tabler:check"></use> </svg></div><div class="mt-0.5"><h3 class="text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2">Innovators in Educational Technology</h3><p class="mt-3 text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2">At CodeArrays, we are at the forefront of integrating technology in education, continuously innovating to enhance learning through digital means.</p></div></div></div><div><div class="flex flex-row max-w-none"><div class="flex justify-center"><svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-2 rtl:mr-0 rtl:ml-2 flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1" data-icon="tabler:check">   <use  xlink:href="#ai:tabler:check"></use> </svg></div><div class="mt-0.5"><h3 class="text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2">Pioneering Software Development</h3><p class="mt-3 text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2">As pioneers in software development, we focus on designing state-of-the-art digital solutions tailored for the educational sector. Our products aim to transform educational delivery and experiences.</p></div></div></div><div><div class="flex flex-row max-w-none"><div class="flex justify-center"><svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-2 rtl:mr-0 rtl:ml-2 flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1" data-icon="tabler:check">   <use  xlink:href="#ai:tabler:check"></use> </svg></div><div class="mt-0.5"><h3 class="text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2">Expertise in Digital Transformation</h3><p class="mt-3 text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2">We specialise in revolutionising the educational landscape by using technology to evolve traditional learning methods and promoting new learning paradigms</p></div></div></div><div><div class="flex flex-row max-w-none"><div class="flex justify-center"><svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-2 rtl:mr-0 rtl:ml-2 flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1" data-icon="tabler:check">   <use  xlink:href="#ai:tabler:check"></use> </svg></div><div class="mt-0.5"><h3 class="text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2">Learning for everyone</h3><p class="mt-3 text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2">Our dedication extends to making learning universally accessible. By utilising technology, we do our utmost to eliminate educational barriers and open up opportunities for learners from all backgrounds.</p></div></div></div><div><div class="flex flex-row max-w-none"><div class="flex justify-center"><svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-2 rtl:mr-0 rtl:ml-2 flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1" data-icon="tabler:check">   <use  xlink:href="#ai:tabler:check"></use> </svg></div><div class="mt-0.5"><h3 class="text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2">Dedicated to Engagement and Effectiveness</h3><p class="mt-3 text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2">Our solutions are designed to incorporate technology and enhance engagement and learning effectiveness. We aim to create captivating educational experiences that foster deep understanding.</p></div></div></div></div> </div> <div aria-hidden="true" class="flex items-center mt-10 md:mt-0 md:basis-1/2"> <div class="flex-1 relative m-auto max-w-4xl"> <img src="/_astro/who-we-are.LKNDaFst.jpg" width="500" height="500" srcset="/_astro/who-we-are.LKNDaFst_Z1ciswu.webp 400w, /_astro/who-we-are.LKNDaFst_29UX46.webp 768w" sizes="(max-width: 768px) 100vw, 432px" style="object-fit: cover; object-position: center; width: 100%; height: auto; aspect-ratio: 1;" class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg" alt="Colorful Image" loading="lazy" decoding="async"> </div> </div> </div> </div>  </div> </section> <section class="relative not-prose scroll-mt-[72px]"> <div class="absolute inset-0 pointer-events-none -z-[1]" aria-hidden="true">   <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>   </div> <div class="relative px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default max-w-7xl mx-auto">  <div class="mb-8 md:mx-auto md:mb-12 text-center max-w-xl sm:mx-auto lg:max-w-2xl"><h2 class="leading-tighter text-heading text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">Our Vision</h2></div> <div class="mx-auto max-w-7xl p-4 md:px-8"> <div class="md:flex  md:gap-16"> <div class="md:basis-1/2 self-center">   <div class="grid mx-auto gap-8 gap-y-4 md:gap-y-8"><div><div class="flex flex-row max-w-none"><div class="flex justify-center"><svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-2 rtl:mr-0 rtl:ml-2 flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1" data-icon="tabler:check">   <use  xlink:href="#ai:tabler:check"></use> </svg></div><div class="mt-0.5"><h3 class="text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2">Integration of Education and Technology</h3><p class="mt-3 text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2">We envision a future where every aspect of education is seamlessly enhanced by digital innovation. In this future, learning exceeds traditional boundaries, becoming more engaging, flexible, and tailored to individual needs.</p></div></div></div><div><div class="flex flex-row max-w-none"><div class="flex justify-center"><svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-2 rtl:mr-0 rtl:ml-2 flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1" data-icon="tabler:check">   <use  xlink:href="#ai:tabler:check"></use> </svg></div><div class="mt-0.5"><h3 class="text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2">Limitless Learning Environment</h3><p class="mt-3 text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2">We are dedicated to transforming learning into an exciting, boundless journey. By leveraging digital technologies, we aim to dismantle physical and digital educational barriers, fostering an environment that encourages exploration and growth at a personal pace.</p></div></div></div><div><div class="flex flex-row max-w-none"><div class="flex justify-center"><svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-2 rtl:mr-0 rtl:ml-2 flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1" data-icon="tabler:check">   <use  xlink:href="#ai:tabler:check"></use> </svg></div><div class="mt-0.5"><h3 class="text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2">Empowering Educators and Learners</h3><p class="mt-3 text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2">Empowerment through education is a fundamental aspect of our vision. We are focused on developing tools that not only educate but also inspire and empower. Our goal is to lead the educational transformation, creating solutions that foster knowledge, confidence, creativity, and a lifelong passion for learning.</p></div></div></div></div> </div> <div aria-hidden="true" class="flex items-center mt-10 md:mt-0 md:basis-1/2"> <div class="flex-1 relative m-auto max-w-4xl"> <img src="/_astro/our-vision.V-rFi1YP.jpg" width="500" height="500" srcset="/_astro/our-vision.V-rFi1YP_ZwK2b.webp 400w, /_astro/our-vision.V-rFi1YP_Z1Iusfw.webp 768w" sizes="(max-width: 768px) 100vw, 432px" style="object-fit: cover; object-position: center; width: 100%; height: auto; aspect-ratio: 1;" class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg" alt="Blueprint Image" loading="lazy" decoding="async"> </div> </div> </div> </div>  </div> </section> <section class="relative not-prose scroll-mt-[72px]"> <div class="absolute inset-0 pointer-events-none -z-[1]" aria-hidden="true">  <div class="absolute inset-0">  </div>  </div> <div class="relative px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default max-w-7xl mx-auto">  <div class="mb-8 md:mx-auto md:mb-12 text-center max-w-xl sm:mx-auto lg:max-w-2xl"><h2 class="leading-tighter text-heading text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">Our Mision</h2></div> <div class="mx-auto max-w-7xl p-4 md:px-8"> <div class="md:flex md:flex-row-reverse md:gap-16"> <div class="md:basis-1/2 self-center">   <div class="grid mx-auto gap-8 gap-y-4 md:gap-y-8"><div><div class="flex flex-row max-w-none"><div class="flex justify-center"><svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-2 rtl:mr-0 rtl:ml-2 flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1" data-icon="tabler:check">  <symbol id="ai:tabler:check"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 12l5 5L20 7"/></symbol> <use  xlink:href="#ai:tabler:check"></use> </svg></div><div class="mt-0.5"><h3 class="text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2">Advancing Education with Innovative Technology</h3><p class="mt-3 text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2">Our mission is to design and implement cutting-edge educational technologies. These are not merely advanced in technical aspects but are also constructed to enhance and transform the learning experience significantly.</p></div></div></div><div><div class="flex flex-row max-w-none"><div class="flex justify-center"><svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-2 rtl:mr-0 rtl:ml-2 flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1" data-icon="tabler:check">   <use  xlink:href="#ai:tabler:check"></use> </svg></div><div class="mt-0.5"><h3 class="text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2">Wide Range of Effective Learning Tools</h3><p class="mt-3 text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2">We commit to creating a broad spectrum of digital learning tools such as interactive e-learning platforms, educational video games, mobile apps, and comprehensive web applications. Our focus is on creating technologically advanced tools that are grounded in educational efficacy, ensuring a meaningful impact on learners of all ages.</p></div></div></div><div><div class="flex flex-row max-w-none"><div class="flex justify-center"><svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-2 rtl:mr-0 rtl:ml-2 flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1" data-icon="tabler:check">   <use  xlink:href="#ai:tabler:check"></use> </svg></div><div class="mt-0.5"><h3 class="text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2">Preparing Learners for Tomorrow&#39;s World</h3><p class="mt-3 text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2">We are dedicated to equipping learners and professionals to thrive amidst rapid technological and societal changes. Our tools aim to foster critical thinking, creativity, and lifelong learning, preparing individuals for future challenges and opportunities.</p></div></div></div></div> </div> <div aria-hidden="true" class="flex items-center mt-10 md:mt-0 md:basis-1/2"> <div class="flex-1 relative m-auto max-w-4xl"> <img src="/_astro/mission.aXtlXK2w.jpg" width="500" height="500" srcset="/_astro/mission.aXtlXK2w_Z2jBk5U.webp 400w, /_astro/mission.aXtlXK2w_12C6uF.webp 768w" sizes="(max-width: 768px) 100vw, 432px" style="object-fit: cover; object-position: center; width: 100%; height: auto; aspect-ratio: 1;" class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg" alt="Colorful Image" loading="lazy" decoding="async"> </div> </div> </div> </div>  </div> </section> <section class="relative not-prose scroll-mt-[72px]"> <div class="absolute inset-0 pointer-events-none -z-[1]" aria-hidden="true">  <div class="absolute inset-0">  </div>  </div> <div class="relative px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default max-w-6xl mx-auto !py-32 !pb-48">  <div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600"> <div class="md:mx-auto text-center mb-0 md:mb-0"><h2 class="leading-tighter text-heading text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading">Ready to learn more?</h2><p class="mt-4 text-xl text-muted dark:text-slate-400">The Join our Journey to Educational Innovation</p></div> <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 mt-6"> <div class="flex w-full sm:w-auto"> <a class="btn-primary w-full sm:mb-0" href="/contact">Get in touch<svg width="1em" height="1em" viewBox="0 0 24 24" class="w-5 h-5 ml-1 -mr-1.5 rtl:mr-1 rtl:-ml-1.5 inline-block" data-icon="tabler:mail">  <symbol id="ai:tabler:mail"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m3 7l9 6l9-6"/></g></symbol> <use  xlink:href="#ai:tabler:mail"></use> </svg></a> </div> </div> </div>  </div> </section>  </main>  <footer class="relative"> <div class="dark:bg-dark absolute inset-0 pointer-events-none" style="background: linear-gradient(300deg, rgba(146, 13, 233, 0.85), rgba(21, 54, 241, 0.85)) no-repeat;" aria-hidden="true"></div> <div class="relative flex flex-col md:flex-row gap-2 items-center justify-center opacity-90 max-w-7xl mx-auto px-4 py-4 sm:px-6 text-white dark:text-slate-300"> <a href="/" class="flex gap-2 self-center items-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-white whitespace-nowrap"> <img src="/_astro/logo.vTg69aO7.svg" width="64.719" height="59" srcset="/_astro/logo.vTg69aO7_Z1Lk1KJ.svg 64.719w, /_astro/logo.vTg69aO7_CyLmY.svg 129.438w" sizes="(min-width: 64.719px) 64.719px, 100vw" style="object-fit: cover; object-position: center; max-width: 64.719px; max-height: 59px; aspect-ratio: 1.0969322033898303; width: 100%;" alt="CODEARRAYS Logo" class="h-8" loading="lazy" decoding="async"> <span class="uppercase text-2xl" style="font-family: Ubuntu, system-ui, sans-serif; font-weight: bold;">CODEARRAYS LTD</span> </a> <span class="hidden md:block text-2xl">·</span> <span class="text-sm">Copyright © 2024 All rights reserved.</span> </div> </footer>   <script>(function(){const defaultTheme = "light:only";
+
+  if (window.basic_script) {
+    return;
+  }
+
+  window.basic_script = true;
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }
+
+  const initTheme = function () {
+    if ((defaultTheme && defaultTheme.endsWith(':only')) || (!localStorage.theme && defaultTheme !== 'system')) {
+      applyTheme(defaultTheme.replace(':only', ''));
+    } else if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      applyTheme('dark');
+    } else {
+      applyTheme('light');
+    }
+  };
+  initTheme();
+
+  function attachEvent(selector, event, fn) {
+    const matches = typeof selector === 'string' ? document.querySelectorAll(selector) : selector;
+    if (matches && matches.length) {
+      matches.forEach((elem) => {
+        elem.addEventListener(event, (e) => fn(e, elem), false);
+      });
+    }
+  }
+
+  const onLoad = function () {
+    let lastKnownScrollPosition = window.scrollY;
+    let ticking = true;
+
+    attachEvent('#header nav', 'click', function () {
+      document.querySelector('[data-aw-toggle-menu]')?.classList.remove('expanded');
+      document.body.classList.remove('overflow-hidden');
+      document.getElementById('header')?.classList.remove('h-screen');
+      document.getElementById('header')?.classList.remove('expanded');
+      document.getElementById('header')?.classList.remove('bg-page');
+      document.querySelector('#header nav')?.classList.add('hidden');
+      document.querySelector('#header > div > div:last-child')?.classList.add('hidden');
+    });
+
+    attachEvent('[data-aw-toggle-menu]', 'click', function (_, elem) {
+      elem.classList.toggle('expanded');
+      document.body.classList.toggle('overflow-hidden');
+      document.getElementById('header')?.classList.toggle('h-screen');
+      document.getElementById('header')?.classList.toggle('expanded');
+      document.getElementById('header')?.classList.toggle('bg-page');
+      document.querySelector('#header nav')?.classList.toggle('hidden');
+      document.querySelector('#header > div > div:last-child')?.classList.toggle('hidden');
+    });
+
+    attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
+      if (defaultTheme.endsWith(':only')) {
+        return;
+      }
+      document.documentElement.classList.toggle('dark');
+      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    });
+
+    let screenSize = window.matchMedia('(max-width: 767px)');
+    screenSize.addEventListener('change', function () {
+      document.querySelector('[data-aw-toggle-menu]')?.classList.remove('expanded');
+      document.body.classList.remove('overflow-hidden');
+      document.getElementById('header')?.classList.remove('h-screen');
+      document.getElementById('header')?.classList.remove('expanded');
+      document.getElementById('header')?.classList.remove('bg-page');
+      document.querySelector('#header nav')?.classList.add('hidden');
+      document.querySelector('#header > div > div:last-child')?.classList.add('hidden');
+    });
+  };
+  const onPageShow = function () {
+    document.documentElement.classList.add('motion-safe:scroll-smooth');
+    const elem = document.querySelector('[data-aw-toggle-menu]');
+    if (elem) {
+      elem.classList.remove('expanded');
+    }
+    document.body.classList.remove('overflow-hidden');
+    document.getElementById('header')?.classList.remove('h-screen');
+    document.getElementById('header')?.classList.remove('expanded');
+    document.querySelector('#header nav')?.classList.add('hidden');
+  };
+
+  window.onload = onLoad;
+  window.onpageshow = onPageShow;
+
+  document.addEventListener('astro:after-swap', () => {
+    initTheme();
+    onLoad();
+    onPageShow();
+  });
+})();</script>  </body> </html>
