@@ -10,9 +10,15 @@ export const headerData = {
       text: 'About us',
       href: getPermalink('/about'),
     },
+    // {
+    //   text: 'Our Work',
+    //   href: getPermalink('/our-work'),
+    // },
     {
-      text: 'Our Work',
-      href: getPermalink('/our-work'),
+      text: 'Research ',
+      href: 'https://codearrays.eu/',
+      external: true,
+      icon: 'tabler:external-link',
     }
   ],
   actions: [{ text: 'Contact Us', href: getPermalink('/contact') }],
